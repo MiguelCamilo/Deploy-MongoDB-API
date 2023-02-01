@@ -7,6 +7,10 @@ import { GET_ALL, CREATE_COLLECTION } from "./src/functions.js"
 const app = express()
 app.use(cors())
 
+app.get('/', (req, res) => {
+    res.send('This Works!')
+})
+
 app.get('/get', GET_ALL)
 
 app.post('/create', CREATE_COLLECTION)
